@@ -13,6 +13,7 @@ module.exports = {
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     mode: 'development',
+    devtool: 'source-map',
     resolve: {
         extensions: ['.js'],
         alias: {
@@ -73,7 +74,9 @@ module.exports = {
             ]
         }),
         new DotEnv(),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin({
+            analyzerPort: 4000
+        })
     ],
     devServer: {
         static: path.join(__dirname, 'dist'),
