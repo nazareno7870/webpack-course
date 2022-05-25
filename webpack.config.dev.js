@@ -11,10 +11,11 @@ module.exports = {
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
-    mode:'development',
+    mode: 'development',
+    watch: true,
     resolve: {
         extensions: ['.js'],
-        alias:{
+        alias: {
             '@utils': path.resolve(__dirname, 'src/utils'),
             '@templates': path.resolve(__dirname, 'src/templates'),
             '@styles': path.resolve(__dirname, 'src/styles'),
